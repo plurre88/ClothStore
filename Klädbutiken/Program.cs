@@ -134,25 +134,25 @@ namespace Klädbutiken
 
                 var input = Console.ReadKey(true);
 
-                switch (input.KeyChar)
+                switch (input.Key)
                 {
-                    case 'a':
+                    case ConsoleKey.A:
                         if (buyItem > 0)
                         {
                             buyItem--;
                         }
                         
                         break;
-                    case 'z':
+                    case ConsoleKey.A:
                         if (buyItem < (store.Count -1))
                         {
                             buyItem++;
                         }
                         break;
-                    case 'b':
+                    case ConsoleKey.Z:
                         cart.Add(store[buyItem]);
                         break;
-                    case 'q':
+                    case ConsoleKey.Enter:
                         runStore = false;
                         break;
                 }
