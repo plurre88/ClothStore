@@ -123,7 +123,7 @@ namespace Klädbutiken
             while (runStore)
             {
                 Console.Clear();
-                Console.WriteLine("Bläddra bland varorna med [A] och [Z]. Välj vara med [B], gå tillbaka till menyn med [Q]");
+                Console.WriteLine("Bläddra bland varorna med [A] och [Z]. Välj vara med [ENTER], gå tillbaka till menyn med [Q]");
                 int pCount = 1;
                 foreach (var p in store)
                 {
@@ -143,16 +143,16 @@ namespace Klädbutiken
                         }
                         
                         break;
-                    case ConsoleKey.A:
+                    case ConsoleKey.Z:
                         if (buyItem < (store.Count -1))
                         {
                             buyItem++;
                         }
                         break;
-                    case ConsoleKey.Z:
+                    case ConsoleKey.Enter:
                         cart.Add(store[buyItem]);
                         break;
-                    case ConsoleKey.Enter:
+                    case ConsoleKey.Q:
                         runStore = false;
                         break;
                 }
